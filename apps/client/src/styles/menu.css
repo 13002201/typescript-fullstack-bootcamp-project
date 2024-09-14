@@ -1,0 +1,53 @@
+.menu {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  /* Hover effect */
+  .menu a:hover {
+    color: #007bff;
+  }
+  
+  /* Active class to make font bold */
+  .menu a.active {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Underline effect on hover */
+  .menu a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #007bff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  
+  /* Active link underline */
+  .menu a.active::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
